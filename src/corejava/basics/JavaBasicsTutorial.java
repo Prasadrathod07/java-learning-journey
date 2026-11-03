@@ -12,6 +12,6 @@ public class JavaBasicsTutorial {
                 "  Operators - Arithmetic , Logical , Assignment expressions\n" +
                 "  condition - if else logic , switch\n" +
                 "  loops - for , while , do while\n" +
-                "  Array - 1D array , 2D array");
+                "  Array - 1D array , 2D array\n" + "public + private\n" + "etc,.") ;
     }
 }
