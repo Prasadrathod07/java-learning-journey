@@ -235,6 +235,7 @@ class SmsNotification implements Notification {
 }
 
 
+
 public class Abstraction {
     public static void main(String[] args){
 
@@ -247,7 +248,7 @@ public class Abstraction {
         email.send(message);
         sms.send(message);
 
-// ----> example 4
+ //----> example 4
         JavaCourse javaCourse = new JavaCourse();
         DesignCourse designCourse = new DesignCourse();
         int score = 65;
