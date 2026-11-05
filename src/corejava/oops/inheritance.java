@@ -196,9 +196,51 @@ class Manager extends Employee{
 
 }
 
+//-------Example 4
+class Vehicle{
+    private int registrationNumber;
+    private int dailyRate;
+
+    Vehicle(int registrationNumber , int dailyRate){
+        this.registrationNumber = registrationNumber;
+        this.dailyRate = dailyRate;
+    }
+//    Vehicle(){}
+    public int getRegistrationNumber(){
+        return registrationNumber;
+    }
+    public int getDailyRate(){
+        return dailyRate;
+    }
+
+
+    public int calculateRent(int days){
+        return days * dailyRate;
+    }
+}
+class Car extends Vehicle {
+    private int insuranceFee;
+    Car(int registrationNumber , int dailyRate , int insuranceFee ){
+        super(registrationNumber , dailyRate);
+        this.insuranceFee = insuranceFee;
+    }
+
+    @Override
+    public int calculateRent(int days){
+        return super.calculateRent(days) + insuranceFee;
+    }
+}
+
+
 
 public class inheritance {
     public static void main(String[] args) {
+
+        //example 4
+        Car car1 = new Car(4400,1000 , 500);
+//        Car car2 = new Car (0044 , 500 , 750);
+        System.out.println(car1.calculateRent(2));
+
 
         //example 3
         Manager manager = new Manager("Prasad" , 125000 , 50000);
