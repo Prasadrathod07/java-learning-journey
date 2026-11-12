@@ -1,5 +1,6 @@
 package corejava.Arrays;
 
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 // Searching ---> array madhe ek element shodhne
@@ -145,47 +146,94 @@ public class Searching {
     Expected: Linear steps: 1000
               Binary steps: 10
      */
-    static int linearSteps(int[] arr, int key) {
-        int steps = 0;
-        for (int i = 0; i < arr.length; i++) {
-            steps++;
-            if (arr[i] == key) {
-                break;
-            }
-        }
-        return steps;
-    }
+//    static int linearSteps(int[] arr, int key) {
+//        int steps = 0;
+//        for (int i = 0; i < arr.length; i++) {
+//            steps++;
+//            if (arr[i] == key) {
+//                break;
+//            }
+//        }
+//        return steps;
+//    }
+//
+//    static int binarySteps(int[] arr, int key) {
+//        int low = 0;
+//        int high = arr.length - 1;
+//        int steps = 0;
+//
+//        while (low <= high) {
+//            steps++;
+//            int mid = (low + high) / 2;
+//
+//            if (arr[mid] == key) {
+//                break;
+//            } else if (key < arr[mid]) {
+//                high = mid - 1;
+//            } else {
+//                low = mid + 1;
+//            }
+//        }
+//        return steps;
+//    }
 
-    static int binarySteps(int[] arr, int key) {
+
+//public static int binarySearch(int[] arr , int target){
+//    int low = 0;
+//    int high = arr.length - 1;
+//
+//    while (low <= high){
+//        int mid = low + (high - low)/2;
+//
+//        if (arr[mid] == target){
+//            return mid;
+//        }else if( arr[mid] <= target){
+//            low = mid +1;
+//        }else{
+//            high = mid - 1;
+//        }
+//    }
+//    return -1;
+//}
+
+
+    public static int binarySearch(int[] arr , int target) {
         int low = 0;
-        int high = arr.length - 1;
-        int steps = 0;
+        int high = arr.length -1;
 
-        while (low <= high) {
-            steps++;
-            int mid = (low + high) / 2;
-
-            if (arr[mid] == key) {
-                break;
-            } else if (key < arr[mid]) {
-                high = mid - 1;
-            } else {
-                low = mid + 1;
+        while(low <= high){
+            int mid = low + (high - low) / 2;
+            if(arr[mid] == target){
+                return mid;
+            }
+            else if(arr[mid] <= target){
+                low = mid +1;
+            }
+            else{
+                high = mid -1;
             }
         }
-        return steps;
+        return -1;
     }
+
 
 
     public static void main(String[] args) {
 
+
+        int [] arr = {4, 11, 18, 25, 33, 47, 59};
+        int target = 47;
+
+        int result = binarySearch(arr , target);
+        System.out.println("Target found at index : " + result);
+
         //----> example 5
-        int[] numbers = new int[1000];
-        for (int i = 0; i < numbers.length; i++) {
-            numbers[i] = i + 1;
-        }
-        System.out.println("Linear steps: " + linearSteps(numbers, 1000));
-        System.out.println("Binary steps: " + binarySteps(numbers, 1000));
+//        int[] numbers = new int[1000];
+//        for (int i = 0; i < numbers.length; i++) {
+//            numbers[i] = i + 1;
+//        }
+//        System.out.println("Linear steps: " + linearSteps(numbers, 1000));
+//        System.out.println("Binary steps: " + binarySteps(numbers, 1000));
 
 
         //----> example 4
