@@ -88,7 +88,36 @@ public class timeAndSpaceComplexity {
 // 10 numbers → 10 iterations, 100 numbers → 100 iterations.
 
 
+
+// ----> O(n^2)
+// O(n^2): Pratyek element sathi sagle elements punha check karto.
+//
+
+
 public static void main(String[] args){
+
+    // ----> O(n^2)
+
+    //find the duplicate numbers in array
+//    int[] num = {10,20,30,20};
+//
+//    for (int i = 0; i < num.length; i++){
+//        for (int j = i+1 ; j<num.length ; j++){
+//            if(num[i] == num[j]){
+//                System.out.println("Duplicate : "+num[i]);
+//            }
+//        }
+//    }
+
+//pratek number sobat pratek number chi pair print karaychi aahe
+//    int[] numbers = {10,20,30};
+//    for(int i =0; i< numbers.length; i++){
+//        for(int j = 0; j<numbers.length; j++){
+//            System.out.println(numbers[i] + "," + numbers[j]);
+//        }
+//    }
+
+
 
 // ----> O(n)
 //    int[] numbers = {10, 20, 30};
@@ -108,6 +137,8 @@ public static void main(String[] args){
 //        sum = sum + num[i];
 //    }
 //    System.out.println(sum);
+
+
 
 // ----O(log n)
 //        int n = 10000;
