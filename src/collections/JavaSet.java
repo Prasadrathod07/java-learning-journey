@@ -11,7 +11,7 @@ classes that implement set:
                            HashSet - fast and unordered
                            TreeSet - sorted set
                            LinkedHashSet - ordered by insertion
-( we use Set when you need to store unique values only - no duplicates )
+( we use Set when you need to store unique values only - no duplicates  )
 // common Set Methods
   - add() --> adds an element if it's not already in the set
   - remove() --> remove the element form teh set
@@ -22,6 +22,15 @@ classes that implement set:
 --> not allow duplicates in set
 --> no index based access
 --> does not guarantee order (in list maintain order)
+
+
+
+hashMap Internals
+collision
+
+--> 
+
+
 
 
 ------> HashSet
@@ -94,6 +103,8 @@ public class JavaSet {
 //                System.out.println(i + "not found in the set");
 //            }
 //        }
+
+
 
     }
 }

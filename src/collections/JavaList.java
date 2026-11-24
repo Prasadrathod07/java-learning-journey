@@ -34,7 +34,7 @@ core interfaces and there common classes
 //
 
                /*
-               LinkedList methods :
+//sequenceCollection,  LinkedList methods :
                                    addFirst()
                                    addLast()
                                    removeFirst()

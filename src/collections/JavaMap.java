@@ -7,8 +7,8 @@ import java.util.*;
 /*
 comman classes that implement Map
 - HashMap (fast and unordered)
-- TreeMap (sorted bu key)
-- LinkeHashMap (ordered bu insertion)
+- TreeMap (sorted by key)
+- LinkeHashMap (ordered by insertion)
 
 
 methods of Map
@@ -80,7 +80,7 @@ public class JavaMap {
 
 //----->HashMap
         //creating HashMap object
-        HashMap<String, String> capitalCities = new HashMap<>();
+//        HashMap<String, String> capitalCities = new HashMap<>();
 
         //Add keys and values(country , city)
 //        capitalCities.put("India", "Delhi");
@@ -105,6 +105,17 @@ public class JavaMap {
 //        }
 
 //    }
+        HashMap<String ,String> capitalCities = new HashMap<>();
+        capitalCities.put("India","Delhi");
+        capitalCities.put("England","London");
 
+        HashMap copy = (HashMap) capitalCities.clone();
+    // copy the capitalCities
+//        System.out.println(copy);
+
+//        System.out.println(copy.containsKey("India"));
+        System.out.println(capitalCities.entrySet()); //entrySet() contains all of the entries in the map
+
+        System.out.println(capitalCities.size());
     }
 }
